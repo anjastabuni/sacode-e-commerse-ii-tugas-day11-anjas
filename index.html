@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profil</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="user hide-details" id="userbox">
+      <img src="profil.jpg" onclick="openinfo()" />
+      <div class="info">
+        <h1>Anjas Tabuni</h1>
+        <p>Working as a product manager at <span>microsoft inc</span></p>
+        <p>From Tolikara, Papua</p>
+        <a href="#">Connect with me</a>
+      </div>
+      <div class="close-icon" onclick="closeinfo()"></div>
+    </div>
+
+    <script>
+      let userbox = document.getElementById("userbox");
+
+      function openinfo() {
+        userbox.classList.remove("hide-details");
+      }
+      function closeinfo() {
+        userbox.classList.add("hide-details");
+      }
+    </script>
+  </body>
+</html>
